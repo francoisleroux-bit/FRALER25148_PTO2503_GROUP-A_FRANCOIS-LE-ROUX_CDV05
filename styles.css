@@ -1,0 +1,286 @@
+/* IMPORT FONT HERE */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --blue: #3aaed8;
+  --text: #222;
+  --muted: #666;
+  --light: #efefef;
+  --purple: #6a53c6;
+  --left-w: 360px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 42px 46px;
+  display: grid;
+  grid-template-columns: var(--left-w) 1fr;
+  gap: 64px;
+}
+
+/* LEFT */
+.left {
+  padding-top: 4px;
+}
+
+.name-block {
+  margin-bottom: 42px;
+}
+
+.name {
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.role {
+  margin: 0;
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-size: 22px;
+  color: var(--blue);
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+/* CONTACT */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 10px 0 14px;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background: #111;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.contact-item a {
+  color: var(--text);
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+/* DATE PILLS */
+.pill-date,
+.exp-date {
+  background: var(--light);
+  padding: 7px 14px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  min-width: 220px;
+}
+
+/* EDUCATION */
+.edu-block {
+  margin-top: 14px;
+}
+
+.edu-strong {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.edu-sub {
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  gap: 26px;
+  margin-top: 14px;
+}
+
+.skill-pill {
+  height: 66px;
+  max-width: 310px;
+  background: #eaf8fc;
+  border: 2px solid var(--blue);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+/* RIGHT SECTION */
+.profile-text {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* EXPERIENCE */
+.exp {
+  margin-top: 22px;
+  padding-top: 8px;
+}
+
+.exp-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+}
+
+.exp-location {
+  justify-self: end;
+  font-weight: 600;
+}
+
+.exp-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.exp-at {
+  font-weight: 500;
+}
+
+/* HOVER LINKS */
+.exp-link {
+  font-style: italic;
+  color: var(--purple);
+  text-decoration: none;
+  position: relative;
+}
+
+.exp-link:hover {
+  text-decoration: underline;
+}
+
+.hover-preview {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 420px;
+  border-radius: 14px;
+  display: none;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  z-index: 900;
+}
+
+.exp-link:hover .hover-preview {
+  display: block;
+}
+
+/* BULLETS */
+.exp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.exp-list li {
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 1.55;
+  position: relative;
+}
+
+.exp-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #111;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  :root {
+    --left-w: 320px;
+  }
+  .page {
+    padding: 32px;
+    gap: 40px;
+  }
+  .name {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    gap: 28px;
+  }
+
+  .skill-pill {
+    max-width: 310px;
+    height: 66px;
+  }
+}
+
+@media (max-width: 414px) {
+  .name {
+    font-size: 46px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .exp-list li,
+  .contact-item {
+    font-size: 17px;
+  }
+}
